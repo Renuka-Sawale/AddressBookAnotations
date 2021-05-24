@@ -1,14 +1,31 @@
 package com.addressbook;
 
+import com.opencsv.bean.CsvBindByName;
+
 public class PersonDetails {
-    public String firstName;
-    public String lastName;
-    public String address;
-    public String city;
-    public String state;
-    public String zip;
-    public String phoneNo;
-    public String email;
+    @CsvBindByName
+    private String firstName;
+
+    @CsvBindByName
+    private String lastName;
+
+    @CsvBindByName
+    private String address;
+
+    @CsvBindByName
+    private String city;
+
+    @CsvBindByName
+    private String state;
+
+    @CsvBindByName
+    private String zip;
+
+    @CsvBindByName
+    private String phoneNo;
+
+    @CsvBindByName
+    private String email;
 
     public PersonDetails(String firstName, String lastName, String address, String city, String state, String zip, String phoneNo, String email) {
         this.firstName = firstName;
@@ -88,15 +105,15 @@ public class PersonDetails {
     @Override
     public String toString() {
         return "PersonDetails{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", address='" + address + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip='" + zip + '\'' +
-                ", phoneNo='" + phoneNo + '\'' +
-                ", email='" + email + '\'' +
-                '}';
+        "firstName='" + firstName + '\'' +
+        ", lastName='" + lastName + '\'' +
+        ", address='" + address + '\'' +
+        ", city='" + city + '\'' +
+        ", state='" + state + '\'' +
+        ", zip='" + zip + '\'' +
+        ", phoneNo='" + phoneNo + '\'' +
+        ", email='" + email + '\'' +
+        '}';
     }
 }
 
